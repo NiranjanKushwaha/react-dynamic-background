@@ -20,13 +20,15 @@ npm install react-dynamic-background
 
 ```
 
+
 ## Usage
 
-Here's a simple example to get you started with the React Dynamic Background component:
+To use `react-dynamic-background`, import it into your React component. Here's a basic example:
 
 ```jsx
 
 import React from 'react';
+import './App.css';
 import DynamicBackground from 'react-dynamic-background';
 
 const App = () => {
@@ -48,6 +50,105 @@ export default App;
 
 ```
 
+## Customizing Styles
+
+To customize the background styles such as opacity, blur, or borders, you will need to add some CSS. Here's an example `app.css` file that includes styles for lower and higher opacity, a blur effect, and a border style:
+
+```css
+
+/* App.css */
+.opacity-low::before {
+  opacity: 0.2; /* Lower opacity */
+}
+
+.opacity-high::before {
+  opacity: 0.8; /* Higher opacity */
+}
+
+.blur-effect::before {
+  filter: blur(8px); /* Apply blur */
+}
+
+.border-style::before {
+  border: 5px solid #fff; /* Add border */
+}
+
+```
+
+## Examples
+
+### Changing Opacity Based on Component State
+
+```jsx
+
+import React, { useState } from 'react';
+import './css/app.css';
+import DynamicBackground from 'react-dynamic-background';
+
+function App() {
+  const [isHighOpacity, setIsHighOpacity] = useState(false);
+
+  return (
+    <div className='parent' onClick={() => setIsHighOpacity(!isHighOpacity)}>
+      <DynamicBackground dynamicBgClasses={isHighOpacity ? 'opacity-high' : 'opacity-low'}>
+        Click me to change opacity!
+      </DynamicBackground>
+    </div>
+  );
+}
+
+export default App;
+
+```
+
+### Applying a Blur Effect
+
+```jsx
+
+import React from 'react';
+import './css/app.css';
+import DynamicBackground from 'react-dynamic-background';
+
+const App = () => {
+  return (
+    <div className='parent'>
+      <DynamicBackground dynamicBgClasses='blur-effect'>
+        Your content here.
+      </DynamicBackground>
+    </div>
+  );
+};
+
+export default App;
+
+```
+
+### Adding a Border
+
+```jsx
+
+import React from 'react';
+import './css/app.css';
+import DynamicBackground from 'react-dynamic-background';
+
+const App = () => {
+  return (
+    <div className='parent'>
+      <DynamicBackground dynamicBgClasses='border-style'>
+        Your content here.
+      </DynamicBackground>
+    </div>
+  );
+};
+
+export default App;
+
+```
+
+## Customization
+
+You can customize the appearance of the dynamic background by passing additional CSS classes through the `dynamicBgClasses` prop. Additionally, you can directly modify the CSS variables and classes defined in the component's stylesheet for more control over the styling.
+
 ## Props
 
 | Prop              | Type     | Default | Description                                      |
@@ -57,9 +158,10 @@ export default App;
 | `dynamicBgClasses`| string   | `''`    | Additional CSS classes for styling.              |
 | `children`        | ReactNode| `null`  | The content to be rendered within the background.|
 
-## Customization
 
-You can customize the appearance of the dynamic background by passing additional CSS classes through the `dynamicBgClasses` prop. Additionally, you can directly modify the CSS variables and classes defined in the component's stylesheet for more control over the styling.
+## Conclusion
+
+With `react-dynamic-background`, you can easily add and customize dynamic backgrounds in your React applications. Remember to import your CSS styles to apply effects like opacity changes, blur, or borders. Experiment with different styles and images to create unique and engaging user experiences.
 
 ## Contributing
 
@@ -68,7 +170,3 @@ Contributions are always welcome! If you'd like to contribute, please fork the r
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
-
----
-
-Remember to replace `react-dynamic-background` with the actual name of your npm package if it's different. Also, ensure that the URLs and default values in the documentation match those in your actual component.
