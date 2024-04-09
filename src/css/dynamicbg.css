@@ -1,4 +1,5 @@
 .dynamic-background {
+  position: relative;
   /* Inherit width from parent  */
   width: 100%;
   /* Inherit height from parent  */
@@ -26,6 +27,7 @@
   bottom: 0;
   background-image: var(--dynamic-bg-image);
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
   /* Ensure the background is behind the content */
   z-index: -1;
