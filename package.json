@@ -9,7 +9,10 @@
     "background",
     "image",
     "slideshow",
-    "react-component"
+    "react-component",
+    "react-dynamic-background",
+    "react-dynamic-bg",
+    "react-background-change"
   ],
   "author": "Niranjan Kushwaha",
   "license": "MIT",
