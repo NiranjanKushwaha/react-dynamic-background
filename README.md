@@ -30,6 +30,7 @@ To use `react-dynamic-background`, import it into your React component. Here's a
 import React from 'react';
 import './App.css';
 import DynamicBackground from 'react-dynamic-background';
+import "react-dynamic-background/dist/style.css";
 
 const App = () => {
   const images = [
@@ -82,8 +83,9 @@ To customize the background styles such as opacity, blur, or borders, you will n
 ```jsx
 
 import React, { useState } from 'react';
-import './css/app.css';
+import './css/App.css';
 import DynamicBackground from 'react-dynamic-background';
+import "react-dynamic-background/dist/style.css";
 
 function App() {
   const [isHighOpacity, setIsHighOpacity] = useState(false);
@@ -106,8 +108,9 @@ export default App;
 ```jsx
 
 import React from 'react';
-import './css/app.css';
+import './css/App.css';
 import DynamicBackground from 'react-dynamic-background';
+import "react-dynamic-background/dist/style.css";
 
 const App = () => {
   return (
@@ -128,8 +131,9 @@ export default App;
 ```jsx
 
 import React from 'react';
-import './css/app.css';
+import './css/App.css';
 import DynamicBackground from 'react-dynamic-background';
+import "react-dynamic-background/dist/style.css";
 
 const App = () => {
   return (

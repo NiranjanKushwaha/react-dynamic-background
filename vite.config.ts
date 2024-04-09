@@ -7,7 +7,8 @@ export default defineConfig({
     lib:{
       entry:"src/index.tsx",
       name:"react-dynamic-background",
-      fileName: (format) => `index.${format}.js`
+      formats: ['es'], // Adjust according to your needs
+      fileName: (format) => `index.js`
     },
     rollupOptions: {
       external: ['react', 'react-dom'], // Specify external dependencies here
