@@ -163,6 +163,10 @@ You can customize the appearance of the dynamic background by passing additional
 | `children`        | ReactNode| `null`  | The content to be rendered within the background.|
 
 
+## Demo
+[Demo URL](https://react-v3qfmq.stackblitz.io)
+
+
 ## Conclusion
 
 With `react-dynamic-background`, you can easily add and customize dynamic backgrounds in your React applications. Remember to import your CSS styles to apply effects like opacity changes, blur, or borders. Experiment with different styles and images to create unique and engaging user experiences.
