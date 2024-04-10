@@ -164,7 +164,7 @@ You can customize the appearance of the dynamic background by passing additional
 
 
 ## Demo
-[Demo URL](https://react-v3qfmq.stackblitz.io)
+See the demo: [Demo URL](https://stackblitz.com/edit/react-v3qfmq)
 
 
 ## Conclusion
